@@ -63,6 +63,6 @@ public class LockDemo {
         list.parallelStream().forEach(Thread::start);
 
         Thread.sleep(3000);
-        System.out.println("main over!");
+        System.out.println("main over!!");
     }
 }
