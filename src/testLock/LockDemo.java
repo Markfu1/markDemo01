@@ -10,11 +10,11 @@ public class LockDemo {
     private Lock lock = new ReentrantLock();
 
     private void workOn() {
-        System.out.println(Thread.currentThread().getName() + ":上班!");
+        System.out.println(Thread.currentThread().getName() + ":work on!");
     }
 
     private void workOff() {
-        System.out.println(Thread.currentThread().getName() + ":下班");
+        System.out.println(Thread.currentThread().getName() + ":work off!");
     }
 
 
@@ -23,7 +23,7 @@ public class LockDemo {
             //lock.lock();
             /*workOn();
             System.out.println(Thread.currentThread().getName()
-                    + "工作中!!!!");
+                    + "working!!!!");
             Thread.sleep(100);
             workOff();*/
             a = a -1;
@@ -47,14 +47,14 @@ public class LockDemo {
                 public void run() {
                     lockDemo.work();
                 }
-            }, "小A_" + i);
+            }, "NameA_" + i);
 
             Thread b = new Thread(new Runnable() {
                 @Override
                 public void run() {
                     lockDemo.work();
                 }
-            }, "小B_" + i);
+            }, "NameB_" + i);
 
 
             list.add(a);
