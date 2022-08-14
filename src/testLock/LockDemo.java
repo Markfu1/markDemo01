@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class LockDemo {
-    private int a = 22;
+    private int a = 50;
     private Lock lock = new ReentrantLock();
 
     private void workOn() {
